@@ -9,5 +9,13 @@ describe('VoteComponent', () => {
     // Assert
     expect(component.totalVotes).toBe(1);
   });
-  it('', () => {});
+
+  it('should decrement totalVotes when downvotes', () => {
+    // Arrange
+    let component = new VoteComponent();
+    // Act
+    component.downVote();
+    // Assert
+    expect(component.totalVotes).toBe(-1);
+  });
 });
