@@ -1,4 +1,9 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  TestBed,
+  fakeAsync,
+  tick,
+} from '@angular/core/testing';
 import { TodoService } from './todo.service';
 import { TodosComponent } from './todos.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -29,4 +34,16 @@ describe('TodosComponent', () => {
 
     expect(component.todos.length).toBe(3);
   });
+
+  xit('should load todos from the server', fakeAsync(() => {
+    let service = TestBed.inject(TodoService);
+    spyOn(service, 'getTodosPromise').and.returnValue(
+      Promise.resolve('Mocked Data')
+    );
+
+    fixture.detectChanges();
+
+    tick();
+    expect(component.todos.length).toBe(11);
+  }));
 });
