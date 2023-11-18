@@ -8,8 +8,9 @@ import { TodosComponent } from './todos/todos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { UsersComponent } from './users/users.component';
+import { HighlightDirective } from './highlight.directive';
 @NgModule({
-  declarations: [AppComponent, VoterComponent, TodosComponent, UserDetailsComponent, UsersComponent],
+  declarations: [AppComponent, VoterComponent, TodosComponent, UserDetailsComponent, UsersComponent, HighlightDirective],
   imports: [RouterModule.forRoot(routes), BrowserModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
