@@ -6,8 +6,9 @@ import { VoterComponent } from './voter/voter.component';
 import { routes } from './app.routes';
 import { TodosComponent } from './todos/todos.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserDetailsComponent } from './user-details/user-details.component';
 @NgModule({
-  declarations: [AppComponent, VoterComponent, TodosComponent],
+  declarations: [AppComponent, VoterComponent, TodosComponent, UserDetailsComponent],
   imports: [RouterModule.forRoot(routes), BrowserModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
