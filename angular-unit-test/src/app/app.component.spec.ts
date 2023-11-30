@@ -39,10 +39,8 @@ describe('AppComponent', () => {
   });
 
   it('ToBe and ToEqual test case', () => {
-    let a = ['1'];
-    let b = ['1'];
-
-    expect(a).toEqual(b);
+    let a = true;
+    expect(a).toBeTrue();
   });
 
 });
