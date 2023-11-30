@@ -24,4 +24,12 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain('angular-unit-test app is running!');
   });
+
+  it('should show alert message', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+
+    expect(app.showMessage('Hello')).toBe('Hello');
+  });
+
 });
