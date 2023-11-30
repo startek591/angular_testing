@@ -38,4 +38,11 @@ describe('AppComponent', () => {
     expect(Addition(10, 20)).toBe(30);
   });
 
+  it('ToBe and ToEqual test case', () => {
+    let a = ['1'];
+    let b = ['1'];
+
+    expect(a).toEqual(b);
+  });
+
 });
