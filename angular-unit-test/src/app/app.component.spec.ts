@@ -40,7 +40,7 @@ describe('AppComponent', () => {
 
   it('ToBe and ToEqual test case', () => {
     let a = true;
-    expect(a).toBeTruthy();
+    expect(undefined).toBeFalsy();
   });
 
 });
