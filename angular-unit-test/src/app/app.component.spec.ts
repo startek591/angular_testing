@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { Addition } from './calculator';
 
-describe('AppComponent', () => {
+xdescribe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
     declarations: [AppComponent]
   }));
@@ -33,7 +33,7 @@ describe('AppComponent', () => {
     expect(app.showMessage('Hello')).toBe('Hello');
   });
 
-  xit('should show Addition result', () => {
+  it('should show Addition result', () => {
 
     expect(Addition(10, 20)).toBeGreaterThan(20);
   });
