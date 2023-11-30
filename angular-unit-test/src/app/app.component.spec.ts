@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { Addition } from './calculator';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
@@ -30,6 +31,11 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
 
     expect(app.showMessage('Hello')).toBe('Hello');
+  });
+
+  it('should show Addition result', () => {
+
+    expect(Addition(10, 20)).toBeGreaterThan(20);
   });
 
 });
